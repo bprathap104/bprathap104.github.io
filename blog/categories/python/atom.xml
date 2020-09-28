@@ -4,7 +4,7 @@
   <title><![CDATA[Category: python | Saran's Blog]]></title>
   <link href="http://bprathap104.github.io/blog/categories/python/atom.xml" rel="self"/>
   <link href="http://bprathap104.github.io/"/>
-  <updated>2020-09-28T19:46:53+05:30</updated>
+  <updated>2020-09-28T21:02:18+05:30</updated>
   <id>http://bprathap104.github.io/</id>
   <author>
     <name><![CDATA[Saravanan Baskaran]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Core-Python]]></title>
+    <link href="http://bprathap104.github.io/blog/2020/09/28/core-python/"/>
+    <updated>2020-09-28T21:01:15+05:30</updated>
+    <id>http://bprathap104.github.io/blog/2020/09/28/core-python</id>
+    <content type="html"><![CDATA[<p>In this post we are going to see the Core-Python concepts</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Python CLI Basics]]></title>
