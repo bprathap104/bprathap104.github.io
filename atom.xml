@@ -1,17 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[Saran's Blog]]></title>
   <link href="http://bprathap104.github.io/atom.xml" rel="self"/>
   <link href="http://bprathap104.github.io/"/>
-  <updated>2020-11-12T01:05:56+05:30</updated>
+  <updated>2020-11-12T01:27:17+05:30</updated>
   <id>http://bprathap104.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Saravanan Baskaran]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress Dev Environment Setup]]></title>
+    <link href="http://bprathap104.github.io/blog/2020/11/12/octopress-dev-environment-setup/"/>
+    <updated>2020-11-12T01:10:22+05:30</updated>
+    <id>http://bprathap104.github.io/blog/2020/11/12/octopress-dev-environment-setup</id>
+    <content type="html"><![CDATA[<p>SETUP OCTOPRESS</p>
+
+<p>Install RVM</p>
+
+<p>Install Ruby 2.3.0</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rvm use 2.3.0
+</span><span class='line'>git clone git://github.com/imathis/octopress.git octopress
+</span><span class='line'>cd octopress
+</span><span class='line'>gem install bundler
+</span><span class='line'>bundle install
+</span><span class='line'>rake install</span></code></pre></td></tr></table></div></figure>
+
+
+<p>SETUP GITHUB REPO IN OCTOPRESS</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake setup_github_pages</span></code></pre></td></tr></table></div></figure>
+
+
+<p>CREATING A NEW BLOG</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post['Title']</span></code></pre></td></tr></table></div></figure>
+
+
+<p>edit the post in the README file under source directory</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
+</span><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Before &lsquo;rake deploy&rsquo; we can try out the blog preview with below command</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
+</span><span class='line'>rake preview</span></code></pre></td></tr></table></div></figure>
+
+
+<p>'</p>
+
+<p>Reference URL&rsquo;s:</p>
+
+<p><a href="http://octopress.org/docs/setup/">http://octopress.org/docs/setup/</a></p>
+
+<p><a href="http://octopress.org/docs/blogging/">http://octopress.org/docs/blogging/</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Cloud Custodian - Learning]]></title>
