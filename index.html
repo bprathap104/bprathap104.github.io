@@ -179,7 +179,25 @@ gem &hellip;">
   </header>
 
 
-  <div class="entry-content">
+  <div class="entry-content"><p>Cloud Custodian is a policy based cloud security tool. It uses serverless capabilities of each of the 3 Cloud Providers to manage its resources to be compliant with Cloud security policies.</p>
+
+<p>The serverless capabilities of each of the 3 service providers are:</p>
+
+<p>1) AWS   - Lambda</p>
+
+<p>2) GCP   - Cloud Functions</p>
+
+<p>3) Azure - Azure Funcitons + Logic App</p>
+
+<p>By default Custodian uses YAML as the input file for policies while it converts it into JSON internally.</p>
+
+<p>We can first start understanding the AWS code. Then we can move into Azure &amp; GCP</p>
+
+<p>Each of the above code base can be logically separated into two logical codes</p>
+
+<p>1) One set of code for <code>custodian</code> CLI</p>
+
+<p>2) Other set of code that actually enforces compliance on the resource</p>
 </div>
   
   
