@@ -1,34 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Saran's Blog]]></title>
+  <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://bprathap104.github.io/atom.xml" rel="self"/>
   <link href="http://bprathap104.github.io/"/>
-  <updated>2020-09-28T21:02:18+05:30</updated>
+  <updated>2020-11-12T00:53:39+05:30</updated>
   <id>http://bprathap104.github.io/</id>
   <author>
-    <name><![CDATA[Saravanan Baskaran]]></name>
+    <name><![CDATA[Your Name]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Core-Python]]></title>
-    <link href="http://bprathap104.github.io/blog/2020/09/28/core-python/"/>
-    <updated>2020-09-28T21:01:15+05:30</updated>
-    <id>http://bprathap104.github.io/blog/2020/09/28/core-python</id>
-    <content type="html"><![CDATA[<p>In this post we are going to see the Core-Python concepts</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Python CLI Basics]]></title>
-    <link href="http://bprathap104.github.io/blog/2020/09/28/python-cli-basics/"/>
-    <updated>2020-09-28T19:16:14+05:30</updated>
-    <id>http://bprathap104.github.io/blog/2020/09/28/python-cli-basics</id>
-    <content type="html"><![CDATA[<p>In this blog we are going to see the steps involved in setting up the Python CLI repository</p>
-]]></content>
-  </entry>
   
 </feed>
