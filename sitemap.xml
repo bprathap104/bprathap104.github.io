@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://bprathap104.github.io/blog/2020/11/12/cloud-custodian-aws-cli/</loc>
+<lastmod>2020-11-12T01:55:57+05:30</lastmod>
+</url>
+<url>
 <loc>http://bprathap104.github.io/blog/2020/11/12/octopress-dev-environment-setup/</loc>
 <lastmod>2020-11-12T01:10:22+05:30</lastmod>
 </url>

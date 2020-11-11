@@ -4,7 +4,7 @@
   <title><![CDATA[Saran's Blog]]></title>
   <link href="http://bprathap104.github.io/atom.xml" rel="self"/>
   <link href="http://bprathap104.github.io/"/>
-  <updated>2020-11-12T01:50:11+05:30</updated>
+  <updated>2020-11-12T02:12:27+05:30</updated>
   <id>http://bprathap104.github.io/</id>
   <author>
     <name><![CDATA[Saravanan Baskaran]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Cloud Custodian - AWS CLI]]></title>
+    <link href="http://bprathap104.github.io/blog/2020/11/12/cloud-custodian-aws-cli/"/>
+    <updated>2020-11-12T01:55:57+05:30</updated>
+    <id>http://bprathap104.github.io/blog/2020/11/12/cloud-custodian-aws-cli</id>
+    <content type="html"><![CDATA[<p>CLI Entry Point is : <a href="https://github.com/cloud-custodian/cloud-custodian/blob/master/c7n/cli.py#L361">https://github.com/cloud-custodian/cloud-custodian/blob/master/c7n/cli.py#L361</a></p>
+
+<p>CLI name: <code>custodian</code></p>
+
+<p>CLI main options:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>custodian run
+</span><span class='line'>custodian schema      # https://github.com/cloud-custodian/cloud-custodian/blob/master/c7n/schema.py#L641
+</span><span class='line'>custodian report
+</span><span class='line'>custodian version     # https://github.com/cloud-custodian/cloud-custodian/blob/master/c7n/version.py
+</span><span class='line'>custodian validate</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Octopress Dev Environment Setup]]></title>
