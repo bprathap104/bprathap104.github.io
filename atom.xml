@@ -4,7 +4,7 @@
   <title><![CDATA[Saran's Blog]]></title>
   <link href="http://bprathap104.github.io/atom.xml" rel="self"/>
   <link href="http://bprathap104.github.io/"/>
-  <updated>2020-11-12T02:12:27+05:30</updated>
+  <updated>2020-11-12T22:29:54+05:30</updated>
   <id>http://bprathap104.github.io/</id>
   <author>
     <name><![CDATA[Saravanan Baskaran]]></name>
@@ -12,6 +12,31 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Cloud Custodian - Exporting Lambda Based Policies for Deploying Manually]]></title>
+    <link href="http://bprathap104.github.io/blog/2020/11/12/cloud-custodian-exporting-lambda-based-policies-for-deploying-manually/"/>
+    <updated>2020-11-12T22:26:19+05:30</updated>
+    <id>http://bprathap104.github.io/blog/2020/11/12/cloud-custodian-exporting-lambda-based-policies-for-deploying-manually</id>
+    <content type="html"><![CDATA[<p>Custodian supports exporting the lambda policies by generating a zip and allows any non-custodian tool to deploy it in AWS Cloud</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>$ mkdir sam-deploy
+</span><span class='line'>$ python policylambda.py -o sam-deploy -c policies.yml
+</span><span class='line'>
+</span><span class='line'>$ cd sam-deploy
+</span><span class='line'>$ aws cloudformation --template-file deploy.yml --s3-bucket mybucket &gt; cfn.yml
+</span><span class='line'>$ aws cloudformation deploy cfn.yml</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Cloud Custodian - AWS CLI]]></title>

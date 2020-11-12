@@ -5,11 +5,17 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Cloud Custodian - Learning - Saran's Blog</title>
+  <title>Cloud Custodian - Exporting Lambda Based Policies for Deploying Manually - Saran's Blog</title>
   <meta name="author" content="Saravanan Baskaran">
 
   
-  <meta name="description" content="Cloud Custodian is a policy based cloud security tool. It uses serverless capabilities of each of the 3 Cloud Providers to manage its resources to be &hellip;">
+  <meta name="description" content="Custodian supports exporting the lambda policies by generating a zip and allows any non-custodian tool to deploy it in AWS Cloud 1
+2
+3
+4
+5
+6
+7 $ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://bprathap104.github.io/blog/2020/11/12/cloud-custodian-learning/">
+  <link rel="canonical" href="http://bprathap104.github.io/blog/2020/11/12/cloud-custodian-exporting-lambda-based-policies-for-deploying-manually/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Saran's Blog" type="application/atom+xml">
@@ -68,7 +74,7 @@
   
   <header>
     
-      <h1 class="entry-title">Cloud Custodian - Learning</h1>
+      <h1 class="entry-title">Cloud Custodian - Exporting Lambda Based Policies for Deploying Manually</h1>
     
     
       <p class="meta">
@@ -77,32 +83,30 @@
 
 
 
-<time class='entry-date' datetime='2020-11-12T01:02:27+05:30'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>12</span><span class='date-suffix'>th</span>, <span class='date-year'>2020</span></span> <span class='time'>1:02 am</span></time>
+<time class='entry-date' datetime='2020-11-12T22:26:19+05:30'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>12</span><span class='date-suffix'>th</span>, <span class='date-year'>2020</span></span> <span class='time'>10:26 pm</span></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Cloud Custodian is a policy based cloud security tool. It uses serverless capabilities of each of the 3 Cloud Providers to manage its resources to be compliant with Cloud security policies.</p>
+<div class="entry-content"><p>Custodian supports exporting the lambda policies by generating a zip and allows any non-custodian tool to deploy it in AWS Cloud</p>
 
-<p>The serverless capabilities of each of the 3 service providers are:</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>$ mkdir sam-deploy
+</span><span class='line'>$ python policylambda.py -o sam-deploy -c policies.yml
+</span><span class='line'>
+</span><span class='line'>$ cd sam-deploy
+</span><span class='line'>$ aws cloudformation --template-file deploy.yml --s3-bucket mybucket &gt; cfn.yml
+</span><span class='line'>$ aws cloudformation deploy cfn.yml</span></code></pre></td></tr></table></div></figure>
 
-<p>1) AWS   - Lambda</p>
-
-<p>2) GCP   - Cloud Functions</p>
-
-<p>3) Azure - Azure Funcitons + Logic App</p>
-
-<p>By default Custodian uses YAML as the input file for policies while it converts it into JSON internally.</p>
-
-<p>We can first start understanding the AWS code. Then we can move into Azure &amp; GCP</p>
-
-<p>Each of the above code base can be logically separated into two logical codes</p>
-
-<p>1) One set of code for <code>custodian</code> CLI</p>
-
-<p>2) Other set of code that actually enforces compliance on the resource</p>
 </div>
 
 
@@ -118,7 +122,7 @@
 
 
 
-<time class='entry-date' datetime='2020-11-12T01:02:27+05:30'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>12</span><span class='date-suffix'>th</span>, <span class='date-year'>2020</span></span> <span class='time'>1:02 am</span></time>
+<time class='entry-date' datetime='2020-11-12T22:26:19+05:30'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>12</span><span class='date-suffix'>th</span>, <span class='date-year'>2020</span></span> <span class='time'>10:26 pm</span></time>
       
 
 
@@ -126,7 +130,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://bprathap104.github.io/blog/2020/11/12/cloud-custodian-learning/" data-via="" data-counturl="http://bprathap104.github.io/blog/2020/11/12/cloud-custodian-learning/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://bprathap104.github.io/blog/2020/11/12/cloud-custodian-exporting-lambda-based-policies-for-deploying-manually/" data-via="" data-counturl="http://bprathap104.github.io/blog/2020/11/12/cloud-custodian-exporting-lambda-based-policies-for-deploying-manually/" >Tweet</a>
   
   
   
@@ -135,8 +139,8 @@
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2020/11/12/cloud-custodian-aws-cli/" title="Previous Post: Cloud Custodian - AWS CLI">&laquo; Cloud Custodian - AWS CLI</a>
       
-        <a class="basic-alignment right" href="/blog/2020/11/12/octopress-dev-environment-setup/" title="Next Post: Octopress dev environment setup">Octopress dev environment setup &raquo;</a>
       
     </p>
   </footer>

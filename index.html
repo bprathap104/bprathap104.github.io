@@ -9,11 +9,13 @@
   <meta name="author" content="Saravanan Baskaran">
 
   
-  <meta name="description" content="CLI Entry Point is : https://github.com/cloud-custodian/cloud-custodian/blob/master/c7n/cli.py#L361 CLI name: custodian CLI main options: 1
+  <meta name="description" content="Custodian supports exporting the lambda policies by generating a zip and allows any non-custodian tool to deploy it in AWS Cloud 1
 2
 3
 4
-5 &hellip;">
+5
+6
+7 $ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -69,6 +71,51 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2020/11/12/cloud-custodian-exporting-lambda-based-policies-for-deploying-manually/">Cloud Custodian - Exporting Lambda Based Policies for Deploying Manually</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2020-11-12T22:26:19+05:30'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>12</span><span class='date-suffix'>th</span>, <span class='date-year'>2020</span></span> <span class='time'>10:26 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Custodian supports exporting the lambda policies by generating a zip and allows any non-custodian tool to deploy it in AWS Cloud</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>$ mkdir sam-deploy
+</span><span class='line'>$ python policylambda.py -o sam-deploy -c policies.yml
+</span><span class='line'>
+</span><span class='line'>$ cd sam-deploy
+</span><span class='line'>$ aws cloudformation --template-file deploy.yml --s3-bucket mybucket &gt; cfn.yml
+</span><span class='line'>$ aws cloudformation deploy cfn.yml</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -258,6 +305,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2020/11/12/cloud-custodian-exporting-lambda-based-policies-for-deploying-manually/">Cloud Custodian - Exporting Lambda Based Policies for Deploying Manually</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2020/11/12/cloud-custodian-aws-cli/">Cloud Custodian - AWS CLI</a>
