@@ -4,7 +4,7 @@
   <title><![CDATA[Saran's Blog]]></title>
   <link href="http://bprathap104.github.io/atom.xml" rel="self"/>
   <link href="http://bprathap104.github.io/"/>
-  <updated>2020-11-12T22:29:54+05:30</updated>
+  <updated>2020-11-13T12:36:16+05:30</updated>
   <id>http://bprathap104.github.io/</id>
   <author>
     <name><![CDATA[Saravanan Baskaran]]></name>
@@ -14,7 +14,21 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Cloud Custodian - Exporting Lambda Based Policies for Deploying Manually]]></title>
+    <title type="html"><![CDATA[Cloud Custodian - Tools - Lambda Garbage Collector - Mugc]]></title>
+    <link href="http://bprathap104.github.io/blog/2020/11/13/cloud-custodian-tools-lambda-garbage-collector-mugc/"/>
+    <updated>2020-11-13T12:32:51+05:30</updated>
+    <id>http://bprathap104.github.io/blog/2020/11/13/cloud-custodian-tools-lambda-garbage-collector-mugc</id>
+    <content type="html"><![CDATA[<p>Cloud Custodian provides a tool called MU Garbage collector(mugc.py), using which we can clear the unused Lamba policies that were earlier deployed using custodian tool.
+For this we need the policy file which has the dfinition for the deployment of those Lmabe policies</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>python tools/ops/mugc.py -c policies.yaml --present</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Cloud Custodian - Tools - Exporting Lambda Based Policies for Deploying Manually]]></title>
     <link href="http://bprathap104.github.io/blog/2020/11/12/cloud-custodian-exporting-lambda-based-policies-for-deploying-manually/"/>
     <updated>2020-11-12T22:26:19+05:30</updated>
     <id>http://bprathap104.github.io/blog/2020/11/12/cloud-custodian-exporting-lambda-based-policies-for-deploying-manually</id>
