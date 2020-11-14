@@ -4,7 +4,7 @@
   <title><![CDATA[Saran's Blog]]></title>
   <link href="http://bprathap104.github.io/atom.xml" rel="self"/>
   <link href="http://bprathap104.github.io/"/>
-  <updated>2020-11-15T01:51:31+05:30</updated>
+  <updated>2020-11-15T01:53:46+05:30</updated>
   <id>http://bprathap104.github.io/</id>
   <author>
     <name><![CDATA[Saravanan Baskaran]]></name>
@@ -752,14 +752,18 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Few actions are common for all the aws resources
-* invoke-lambda
-* invoke-sfn
-* notify
-* post-finding
-* post-item
-* put-metric
-* webhook</p>
+<p>Few actions are common for all the aws resources</p>
+
+<ul>
+<li><p>invoke-lambda</p></li>
+<li><p>invoke-sfn</p></li>
+<li><p>notify</p></li>
+<li><p>post-finding</p></li>
+<li><p>post-item</p></li>
+<li><p>put-metric</p></li>
+<li><p>webhook</p></li>
+</ul>
+
 ]]></content>
   </entry>
   
