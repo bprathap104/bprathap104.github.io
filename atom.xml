@@ -4,7 +4,7 @@
   <title><![CDATA[Saran's Blog]]></title>
   <link href="http://bprathap104.github.io/atom.xml" rel="self"/>
   <link href="http://bprathap104.github.io/"/>
-  <updated>2020-11-13T13:25:54+05:30</updated>
+  <updated>2020-11-15T01:20:28+05:30</updated>
   <id>http://bprathap104.github.io/</id>
   <author>
     <name><![CDATA[Saravanan Baskaran]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Accelarators]]></title>
+    <link href="http://bprathap104.github.io/blog/2020/11/13/is-brand-important/"/>
+    <updated>2020-11-13T13:26:30+05:30</updated>
+    <id>http://bprathap104.github.io/blog/2020/11/13/is-brand-important</id>
+    <content type="html"><![CDATA[<p>Sun Nov 15 01:08:17 IST 2020</p>
+
+<p>In vim escape mode we can insert current date &amp; time.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>:r !date</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Though various other formatting options are available, this one is very straight forward.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Cloud Custodian - Tools - Lambda Garbage Collector - Mugc]]></title>
@@ -82,7 +99,374 @@
 </span><span class='line'>custodian validate</span></code></pre></td></tr></table></div></figure>
 
 
+<p>Sun Nov 15 01:05:37 IST 2020
+Lets discuss more about custodian schema sub-command today.</p>
 
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+<span class='line-number'>113</span>
+<span class='line-number'>114</span>
+<span class='line-number'>115</span>
+<span class='line-number'>116</span>
+<span class='line-number'>117</span>
+<span class='line-number'>118</span>
+<span class='line-number'>119</span>
+<span class='line-number'>120</span>
+<span class='line-number'>121</span>
+<span class='line-number'>122</span>
+<span class='line-number'>123</span>
+<span class='line-number'>124</span>
+<span class='line-number'>125</span>
+<span class='line-number'>126</span>
+<span class='line-number'>127</span>
+<span class='line-number'>128</span>
+<span class='line-number'>129</span>
+<span class='line-number'>130</span>
+<span class='line-number'>131</span>
+<span class='line-number'>132</span>
+<span class='line-number'>133</span>
+<span class='line-number'>134</span>
+<span class='line-number'>135</span>
+<span class='line-number'>136</span>
+<span class='line-number'>137</span>
+<span class='line-number'>138</span>
+<span class='line-number'>139</span>
+<span class='line-number'>140</span>
+<span class='line-number'>141</span>
+<span class='line-number'>142</span>
+<span class='line-number'>143</span>
+<span class='line-number'>144</span>
+<span class='line-number'>145</span>
+<span class='line-number'>146</span>
+<span class='line-number'>147</span>
+<span class='line-number'>148</span>
+<span class='line-number'>149</span>
+<span class='line-number'>150</span>
+<span class='line-number'>151</span>
+<span class='line-number'>152</span>
+<span class='line-number'>153</span>
+<span class='line-number'>154</span>
+<span class='line-number'>155</span>
+<span class='line-number'>156</span>
+<span class='line-number'>157</span>
+<span class='line-number'>158</span>
+<span class='line-number'>159</span>
+<span class='line-number'>160</span>
+<span class='line-number'>161</span>
+<span class='line-number'>162</span>
+<span class='line-number'>163</span>
+<span class='line-number'>164</span>
+<span class='line-number'>165</span>
+<span class='line-number'>166</span>
+<span class='line-number'>167</span>
+<span class='line-number'>168</span>
+<span class='line-number'>169</span>
+<span class='line-number'>170</span>
+<span class='line-number'>171</span>
+<span class='line-number'>172</span>
+<span class='line-number'>173</span>
+<span class='line-number'>174</span>
+<span class='line-number'>175</span>
+<span class='line-number'>176</span>
+<span class='line-number'>177</span>
+<span class='line-number'>178</span>
+<span class='line-number'>179</span>
+<span class='line-number'>180</span>
+<span class='line-number'>181</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$&gt;custodian schema  #or# $&gt;custodian schema aws/azure/gcp cloud provider name can be used based on the type of custodian tool installed
+</span><span class='line'>- aws.account
+</span><span class='line'>- aws.acm-certificate
+</span><span class='line'>- aws.alarm
+</span><span class='line'>- aws.ami
+</span><span class='line'>- aws.app-elb
+</span><span class='line'>- aws.app-elb-target-group
+</span><span class='line'>- aws.artifact-domain
+</span><span class='line'>- aws.artifact-repo
+</span><span class='line'>- aws.asg
+</span><span class='line'>- aws.backup-plan
+</span><span class='line'>- aws.backup-vault
+</span><span class='line'>- aws.batch-compute
+</span><span class='line'>- aws.batch-definition
+</span><span class='line'>- aws.cache-cluster
+</span><span class='line'>- aws.cache-snapshot
+</span><span class='line'>- aws.cache-subnet-group
+</span><span class='line'>- aws.catalog-portfolio
+</span><span class='line'>- aws.cfn
+</span><span class='line'>- aws.cloud-directory
+</span><span class='line'>- aws.cloudhsm-cluster
+</span><span class='line'>- aws.cloudsearch
+</span><span class='line'>- aws.cloudtrail
+</span><span class='line'>- aws.codebuild
+</span><span class='line'>- aws.codecommit
+</span><span class='line'>- aws.codepipeline
+</span><span class='line'>- aws.config-recorder
+</span><span class='line'>- aws.config-rule
+</span><span class='line'>- aws.customer-gateway
+</span><span class='line'>- aws.datapipeline
+</span><span class='line'>- aws.dax
+</span><span class='line'>- aws.directconnect
+</span><span class='line'>- aws.directory
+</span><span class='line'>- aws.distribution
+</span><span class='line'>- aws.dlm-policy
+</span><span class='line'>- aws.dms-endpoint
+</span><span class='line'>- aws.dms-instance
+</span><span class='line'>- aws.dynamodb-backup
+</span><span class='line'>- aws.dynamodb-stream
+</span><span class='line'>- aws.dynamodb-table
+</span><span class='line'>- aws.ebs
+</span><span class='line'>- aws.ebs-snapshot
+</span><span class='line'>- aws.ec2
+</span><span class='line'>- aws.ec2-host
+</span><span class='line'>- aws.ec2-reserved
+</span><span class='line'>- aws.ecr
+</span><span class='line'>- aws.ecs
+</span><span class='line'>- aws.ecs-container-instance
+</span><span class='line'>- aws.ecs-service
+</span><span class='line'>- aws.ecs-task
+</span><span class='line'>- aws.ecs-task-definition
+</span><span class='line'>- aws.efs
+</span><span class='line'>- aws.efs-mount-target
+</span><span class='line'>- aws.eks
+</span><span class='line'>- aws.elastic-ip
+</span><span class='line'>- aws.elasticache-group
+</span><span class='line'>- aws.elasticbeanstalk
+</span><span class='line'>- aws.elasticbeanstalk-environment
+</span><span class='line'>- aws.elasticsearch
+</span><span class='line'>- aws.elasticsearch-reserved
+</span><span class='line'>- aws.elb
+</span><span class='line'>- aws.emr
+</span><span class='line'>- aws.emr-security-configuration
+</span><span class='line'>- aws.eni
+</span><span class='line'>- aws.event-rule
+</span><span class='line'>- aws.event-rule-target
+</span><span class='line'>- aws.firehose
+</span><span class='line'>- aws.fsx
+</span><span class='line'>- aws.fsx-backup
+</span><span class='line'>- aws.gamelift-build
+</span><span class='line'>- aws.gamelift-fleet
+</span><span class='line'>- aws.glacier
+</span><span class='line'>- aws.glue-catalog
+</span><span class='line'>- aws.glue-classifier
+</span><span class='line'>- aws.glue-connection
+</span><span class='line'>- aws.glue-crawler
+</span><span class='line'>- aws.glue-database
+</span><span class='line'>- aws.glue-dev-endpoint
+</span><span class='line'>- aws.glue-job
+</span><span class='line'>- aws.glue-ml-transform
+</span><span class='line'>- aws.glue-security-configuration
+</span><span class='line'>- aws.glue-table
+</span><span class='line'>- aws.glue-trigger
+</span><span class='line'>- aws.glue-workflow
+</span><span class='line'>- aws.health-event
+</span><span class='line'>- aws.healthcheck
+</span><span class='line'>- aws.hostedzone
+</span><span class='line'>- aws.hsm
+</span><span class='line'>- aws.hsm-client
+</span><span class='line'>- aws.hsm-hapg
+</span><span class='line'>- aws.iam-certificate
+</span><span class='line'>- aws.iam-group
+</span><span class='line'>- aws.iam-policy
+</span><span class='line'>- aws.iam-profile
+</span><span class='line'>- aws.iam-role
+</span><span class='line'>- aws.iam-user
+</span><span class='line'>- aws.identity-pool
+</span><span class='line'>- aws.insight-rule
+</span><span class='line'>- aws.internet-gateway
+</span><span class='line'>- aws.iot
+</span><span class='line'>- aws.kafka
+</span><span class='line'>- aws.key-pair
+</span><span class='line'>- aws.kinesis
+</span><span class='line'>- aws.kinesis-analytics
+</span><span class='line'>- aws.kms
+</span><span class='line'>- aws.kms-key
+</span><span class='line'>- aws.lambda
+</span><span class='line'>- aws.lambda-layer
+</span><span class='line'>- aws.launch-config
+</span><span class='line'>- aws.launch-template-version
+</span><span class='line'>- aws.lightsail-db
+</span><span class='line'>- aws.lightsail-elb
+</span><span class='line'>- aws.lightsail-instance
+</span><span class='line'>- aws.log-group
+</span><span class='line'>- aws.message-broker
+</span><span class='line'>- aws.ml-model
+</span><span class='line'>- aws.nat-gateway
+</span><span class='line'>- aws.network-acl
+</span><span class='line'>- aws.network-addr
+</span><span class='line'>- aws.ops-item
+</span><span class='line'>- aws.opswork-cm
+</span><span class='line'>- aws.opswork-stack
+</span><span class='line'>- aws.peering-connection
+</span><span class='line'>- aws.qldb
+</span><span class='line'>- aws.r53domain
+</span><span class='line'>- aws.rds
+</span><span class='line'>- aws.rds-cluster
+</span><span class='line'>- aws.rds-cluster-param-group
+</span><span class='line'>- aws.rds-cluster-snapshot
+</span><span class='line'>- aws.rds-param-group
+</span><span class='line'>- aws.rds-reserved
+</span><span class='line'>- aws.rds-snapshot
+</span><span class='line'>- aws.rds-subnet-group
+</span><span class='line'>- aws.rds-subscription
+</span><span class='line'>- aws.redshift
+</span><span class='line'>- aws.redshift-reserved
+</span><span class='line'>- aws.redshift-snapshot
+</span><span class='line'>- aws.redshift-subnet-group
+</span><span class='line'>- aws.rest-account
+</span><span class='line'>- aws.rest-api
+</span><span class='line'>- aws.rest-resource
+</span><span class='line'>- aws.rest-stage
+</span><span class='line'>- aws.rest-vpclink
+</span><span class='line'>- aws.route-table
+</span><span class='line'>- aws.rrset
+</span><span class='line'>- aws.s3
+</span><span class='line'>- aws.sagemaker-endpoint
+</span><span class='line'>- aws.sagemaker-endpoint-config
+</span><span class='line'>- aws.sagemaker-job
+</span><span class='line'>- aws.sagemaker-model
+</span><span class='line'>- aws.sagemaker-notebook
+</span><span class='line'>- aws.sagemaker-transform-job
+</span><span class='line'>- aws.secrets-manager
+</span><span class='line'>- aws.security-group
+</span><span class='line'>- aws.serverless-app
+</span><span class='line'>- aws.shield-attack
+</span><span class='line'>- aws.shield-protection
+</span><span class='line'>- aws.simpledb
+</span><span class='line'>- aws.snowball
+</span><span class='line'>- aws.snowball-cluster
+</span><span class='line'>- aws.sns
+</span><span class='line'>- aws.sns-subscription
+</span><span class='line'>- aws.sqs
+</span><span class='line'>- aws.ssm-activation
+</span><span class='line'>- aws.ssm-managed-instance
+</span><span class='line'>- aws.ssm-parameter
+</span><span class='line'>- aws.step-machine
+</span><span class='line'>- aws.storage-gateway
+</span><span class='line'>- aws.streaming-distribution
+</span><span class='line'>- aws.subnet
+</span><span class='line'>- aws.support-case
+</span><span class='line'>- aws.transit-attachment
+</span><span class='line'>- aws.transit-gateway
+</span><span class='line'>- aws.user-pool
+</span><span class='line'>- aws.vpc
+</span><span class='line'>- aws.vpc-endpoint
+</span><span class='line'>- aws.vpn-connection
+</span><span class='line'>- aws.vpn-gateway
+</span><span class='line'>- aws.waf
+</span><span class='line'>- aws.waf-regional
+</span><span class='line'>- aws.workspaces</span></code></pre></td></tr></table></div></figure>
+
+
+<p>For the record the number of resources listed are 180 as of Sun Nov 15 01:20:03 IST 2020</p>
 ]]></content>
   </entry>
   

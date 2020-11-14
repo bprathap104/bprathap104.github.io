@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://bprathap104.github.io/blog/2020/11/13/is-brand-important/</loc>
+<lastmod>2020-11-13T13:26:30+05:30</lastmod>
+</url>
+<url>
 <loc>http://bprathap104.github.io/blog/2020/11/13/cloud-custodian-tools-lambda-garbage-collector-mugc/</loc>
 <lastmod>2020-11-13T12:32:51+05:30</lastmod>
 </url>
@@ -31,5 +35,14 @@
 </url>
 <url>
 <loc>http://bprathap104.github.io/deploy-new-blog/page.html</loc>
+</url>
+<url>
+<loc>http://bprathap104.github.io/blog/categories/linux/</loc>
+</url>
+<url>
+<loc>http://bprathap104.github.io/blog/categories/commands/</loc>
+</url>
+<url>
+<loc>http://bprathap104.github.io/blog/categories/shortcuts/</loc>
 </url>
 </urlset>

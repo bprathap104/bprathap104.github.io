@@ -5,17 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Cloud Custodian - Tools - Exporting Lambda Based Policies for Deploying Manually - Saran's Blog</title>
+  <title>Category: Linux - Saran's Blog</title>
   <meta name="author" content="Saravanan Baskaran">
 
   
-  <meta name="description" content="Custodian supports exporting the lambda policies by generating a zip and allows any non-custodian tool to deploy it in AWS Cloud 1
-2
-3
-4
-5
-6
-7 $ &hellip;">
+  <meta name="description" content="Category: linux">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -24,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://bprathap104.github.io/blog/2020/11/12/cloud-custodian-exporting-lambda-based-policies-for-deploying-manually/">
+  <link rel="canonical" href="http://bprathap104.github.io/blog/categories/linux/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Saran's Blog" type="application/atom+xml">
@@ -70,82 +64,35 @@
   <div id="main">
     <div id="content">
       <div>
-<article class="hentry" role="article">
+<article role="article">
   
   <header>
-    
-      <h1 class="entry-title">Cloud Custodian - Tools - Exporting Lambda Based Policies for Deploying Manually</h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2020-11-12T22:26:19+05:30'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>12</span><span class='date-suffix'>th</span>, <span class='date-year'>2020</span></span> <span class='time'>10:26 pm</span></time>
-        
-      </p>
+    <h1 class="entry-title">Category: Linux</h1>
     
   </header>
+  
+  <div id="blog-archives" class="category">
 
 
-<div class="entry-content"><p>Custodian supports exporting the lambda policies by generating a zip and allows any non-custodian tool to deploy it in AWS Cloud</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>$ mkdir sam-deploy
-</span><span class='line'>$ python policylambda.py -o sam-deploy -c policies.yml
-</span><span class='line'>
-</span><span class='line'>$ cd sam-deploy
-</span><span class='line'>$ aws cloudformation --template-file deploy.yml --s3-bucket mybucket &gt; cfn.yml
-</span><span class='line'>$ aws cloudformation deploy cfn.yml</span></code></pre></td></tr></table></div></figure>
+  
+  <h2>2020</h2>
+
+<article>
+  
+<h1><a href="/blog/2020/11/13/is-brand-important/">Accelarators</a></h1>
+<time datetime="2020-11-13T13:26:30+05:30" pubdate><span class='month'>Nov</span> <span class='day'>13</span> <span class='year'>2020</span></time>
+
+<footer>
+  <span class="categories">posted in <a class='category' href='/blog/categories/commands/'>commands,</a>, <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/shortcuts/'>shortcuts</a></span>
+</footer>
+
+
+</article>
 
 </div>
 
-
-  <footer>
-    <p class="meta">
-      
   
-
-<span class="byline author vcard">Posted by <span class="fn">Saravanan Baskaran</span></span>
-
-      
-
-
-
-
-<time class='entry-date' datetime='2020-11-12T22:26:19+05:30'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>12</span><span class='date-suffix'>th</span>, <span class='date-year'>2020</span></span> <span class='time'>10:26 pm</span></time>
-      
-
-
-    </p>
-    
-      <div class="sharing">
-  
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://bprathap104.github.io/blog/2020/11/12/cloud-custodian-exporting-lambda-based-policies-for-deploying-manually/" data-via="" data-counturl="http://bprathap104.github.io/blog/2020/11/12/cloud-custodian-exporting-lambda-based-policies-for-deploying-manually/" >Tweet</a>
-  
-  
-  
-</div>
-
-    
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/blog/2020/11/12/cloud-custodian-aws-cli/" title="Previous Post: Cloud Custodian - AWS CLI">&laquo; Cloud Custodian - AWS CLI</a>
-      
-      
-        <a class="basic-alignment right" href="/blog/2020/11/13/cloud-custodian-tools-lambda-garbage-collector-mugc/" title="Next Post: Cloud Custodian - Tools - Lambda garbage collector - mugc">Cloud Custodian - Tools - Lambda garbage collector - mugc &raquo;</a>
-      
-    </p>
-  </footer>
 </article>
 
 </div>
