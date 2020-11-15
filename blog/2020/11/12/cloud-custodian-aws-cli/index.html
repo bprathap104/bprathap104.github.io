@@ -1083,7 +1083,7 @@
 
 <p>Sun Nov 15 16:01:45 IST 2020</p>
 
-<p>Vocabularies of Custodian</p>
+<p><strong>Vocabularies</strong> of Custodian</p>
 
 <ul>
 <li><p>Resources</p></li>
@@ -1119,6 +1119,12 @@
 </span><span class='line'>$&gt;
 </span></code></pre></td></tr></table></div></figure>
 
+
+<p>When <code>custodian</code> command is invoked it first calls <code>c7n/cli.py</code></p>
+
+<p>When <code>custodian schema</code> command first invoked, it first calls <code>schema_cmd function</code> in <code>c7n/commands.py</code>.</p>
+
+<p>Then <code>from c7n import schema</code> input invokes <code>c7n/schema.py</code></p>
 </div>
 
 
