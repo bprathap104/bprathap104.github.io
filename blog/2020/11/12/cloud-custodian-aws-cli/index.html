@@ -1125,6 +1125,46 @@
 <p>When <code>custodian schema</code> command first invoked, it first calls <code>schema_cmd function</code> in <code>c7n/commands.py</code>.</p>
 
 <p>Then <code>from c7n import schema</code> input invokes <code>c7n/schema.py</code></p>
+
+<p>In <code>schema_cmd</code> function we have definition of all the allowed options for <code>custodian schema</code></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Here are the formats for what we accept:
+</span><span class='line'># - No argument
+</span><span class='line'>#   - List all available RESOURCES
+</span><span class='line'># - PROVIDER
+</span><span class='line'>#   - List all available RESOURCES for supplied PROVIDER
+</span><span class='line'># - RESOURCE
+</span><span class='line'>#   - List all available actions and filters for supplied RESOURCE
+</span><span class='line'># - MODE
+</span><span class='line'>#   - List all available MODES
+</span><span class='line'># - RESOURCE.actions
+</span><span class='line'>#   - List all available actions for supplied RESOURCE
+</span><span class='line'># - RESOURCE.actions.ACTION
+</span><span class='line'>#   - Show class doc string and schema for supplied action
+</span><span class='line'># - RESOURCE.filters
+</span><span class='line'>#   - List all available filters for supplied RESOURCE
+</span><span class='line'># - RESOURCE.filters.FILTER
+</span><span class='line'>#   - Show class doc string and schema for supplied filter</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
 
 
