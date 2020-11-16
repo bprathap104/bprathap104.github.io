@@ -4,7 +4,7 @@
   <title><![CDATA[Saran's Blog]]></title>
   <link href="http://bprathap104.github.io/atom.xml" rel="self"/>
   <link href="http://bprathap104.github.io/"/>
-  <updated>2020-11-15T18:01:42+05:30</updated>
+  <updated>2020-11-16T09:26:07+05:30</updated>
   <id>http://bprathap104.github.io/</id>
   <author>
     <name><![CDATA[Saravanan Baskaran]]></name>
@@ -81,7 +81,7 @@
     <link href="http://bprathap104.github.io/blog/2020/11/12/cloud-custodian-aws-cli/"/>
     <updated>2020-11-12T01:55:57+05:30</updated>
     <id>http://bprathap104.github.io/blog/2020/11/12/cloud-custodian-aws-cli</id>
-    <content type="html"><![CDATA[<p>CLI Entry Point is : <a href="https://github.com/cloud-custodian/cloud-custodian/blob/master/c7n/cli.py#L361">https://github.com/cloud-custodian/cloud-custodian/blob/master/c7n/cli.py#L361</a></p>
+    <content type="html"><![CDATA[<p>CLI Entry Point is : c7n/cli.py</p>
 
 <p>CLI name: <code>custodian</code></p>
 
@@ -1115,9 +1115,9 @@
 
 <p>When <code>custodian</code> command is invoked it first calls <code>c7n/cli.py</code></p>
 
-<p>When <code>custodian schema</code> command first invoked, it first calls <code>schema_cmd function</code> in <code>c7n/commands.py</code>.</p>
+<p>When <code>custodian schema</code> command first invoked, it first calls <code>schema_cmd</code> function in <code>c7n/commands.py</code>.</p>
 
-<p>Then <code>from c7n import schema</code> input invokes <code>c7n/schema.py</code></p>
+<p>In <code>schema_cmd</code> function <code>c7n/schema.py</code> invoke happens through <code>from c7n import schema</code></p>
 
 <p>In <code>schema_cmd</code> function we have definition of all the allowed options for <code>custodian schema</code></p>
 

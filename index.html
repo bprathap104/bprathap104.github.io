@@ -211,7 +211,7 @@
   </header>
 
 
-  <div class="entry-content"><p>CLI Entry Point is : <a href="https://github.com/cloud-custodian/cloud-custodian/blob/master/c7n/cli.py#L361">https://github.com/cloud-custodian/cloud-custodian/blob/master/c7n/cli.py#L361</a></p>
+  <div class="entry-content"><p>CLI Entry Point is : c7n/cli.py</p>
 
 <p>CLI name: <code>custodian</code></p>
 
@@ -1245,9 +1245,9 @@
 
 <p>When <code>custodian</code> command is invoked it first calls <code>c7n/cli.py</code></p>
 
-<p>When <code>custodian schema</code> command first invoked, it first calls <code>schema_cmd function</code> in <code>c7n/commands.py</code>.</p>
+<p>When <code>custodian schema</code> command first invoked, it first calls <code>schema_cmd</code> function in <code>c7n/commands.py</code>.</p>
 
-<p>Then <code>from c7n import schema</code> input invokes <code>c7n/schema.py</code></p>
+<p>In <code>schema_cmd</code> function <code>c7n/schema.py</code> invoke happens through <code>from c7n import schema</code></p>
 
 <p>In <code>schema_cmd</code> function we have definition of all the allowed options for <code>custodian schema</code></p>
 

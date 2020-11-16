@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Cloudcustodian, | Saran's Blog]]></title>
+  <link href="http://bprathap104.github.io/blog/categories/cloudcustodian/atom.xml" rel="self"/>
+  <link href="http://bprathap104.github.io/"/>
+  <updated>2020-11-16T09:26:07+05:30</updated>
+  <id>http://bprathap104.github.io/</id>
+  <author>
+    <name><![CDATA[Saravanan Baskaran]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Cloud Custodian - AWS CLI]]></title>
+    <link href="http://bprathap104.github.io/blog/2020/11/12/cloud-custodian-aws-cli/"/>
+    <updated>2020-11-12T01:55:57+05:30</updated>
+    <id>http://bprathap104.github.io/blog/2020/11/12/cloud-custodian-aws-cli</id>
+    <content type="html"><![CDATA[<p>CLI Entry Point is : c7n/cli.py</p>
+
+<p>CLI name: <code>custodian</code></p>
+
+<p>CLI main options:
+<code>
+    custodian run
+    custodian schema      # https://github.com/cloud-custodian/cloud-custodian/blob/master/c7n/schema.py#L641
+    custodian report
+    custodian version     # https://github.com/cloud-custodian/cloud-custodian/blob/master/c7n/version.py
+    custodian validate
+</code></p>
+
+<p>Sun Nov 15 01:05:37 IST 2020</p>
+
+<p>Lets discuss more about custodian schema sub-command today.</p>
+
+<pre><code>$&gt;custodian schema  #or# $&gt;custodian schema aws/azure/gcp cloud provider name can be used based on the type of custodian tool installed
+- aws.account
+- aws.acm-certificate
+- aws.alarm
+- aws.ami
+- aws.app-elb
+- aws.app-elb-target-group
+- aws.artifact-domain
+- aws.artifact-repo
+- aws.asg
+- aws.backup-plan
+- aws.backup-vault
+- aws.batch-compute
+- aws.batch-definition
+- aws.cache-cluster
+- aws.cache-snapshot
+- aws.cache-subnet-group
+- aws.catalog-portfolio
+- aws.cfn
+- aws.cloud-directory
+- aws.cloudhsm-cluster
+- aws.cloudsearch
+- aws.cloudtrail
+- aws.codebuild
+- aws.codecommit
+- aws.codepipeline
+- aws.config-recorder
+- aws.config-rule
+- aws.customer-gateway
+- aws.datapipeline
+- aws.dax
+- aws.directconnect
+- aws.directory
+- aws.distribution
+- aws.dlm-policy
+- aws.dms-endpoint
+- aws.dms-instance
+- aws.dynamodb-backup
+- aws.dynamodb-stream
+- aws.dynamodb-table
+- aws.ebs
+- aws.ebs-snapshot
+- aws.ec2
+- aws.ec2-host
+- aws.ec2-reserved
+- aws.ecr
+- aws.ecs
+- aws.ecs-container-instance
+- aws.ecs-service
+- aws.ecs-task
+- aws.ecs-task-definition
+- aws.efs
+- aws.efs-mount-target
+- aws.eks
+- aws.elastic-ip
+- aws.elasticache-group
+- aws.elasticbeanstalk
+- aws.elasticbeanstalk-environment
+- aws.elasticsearch
+- aws.elasticsearch-reserved
+- aws.elb
+- aws.emr
+- aws.emr-security-configuration
+- aws.eni
+- aws.event-rule
+- aws.event-rule-target
+- aws.firehose
+- aws.fsx
+- aws.fsx-backup
+- aws.gamelift-build
+- aws.gamelift-fleet
+- aws.glacier
+- aws.glue-catalog
+- aws.glue-classifier
+- aws.glue-connection
+- aws.glue-crawler
+- aws.glue-database
+- aws.glue-dev-endpoint
+- aws.glue-job
+- aws.glue-ml-transform
+- aws.glue-security-configuration
+- aws.glue-table
+- aws.glue-trigger
+- aws.glue-workflow
+- aws.health-event
+- aws.healthcheck
+- aws.hostedzone
+- aws.hsm
+- aws.hsm-client
+- aws.hsm-hapg
+- aws.iam-certificate
+- aws.iam-group
+- aws.iam-policy
+- aws.iam-profile
+- aws.iam-role
+- aws.iam-user
+- aws.identity-pool
+- aws.insight-rule
+- aws.internet-gateway
+- aws.iot
+- aws.kafka
+- aws.key-pair
+- aws.kinesis
+- aws.kinesis-analytics
+- aws.kms
+- aws.kms-key
+- aws.lambda
+- aws.lambda-layer
+- aws.launch-config
+- aws.launch-template-version
+- aws.lightsail-db
+- aws.lightsail-elb
+- aws.lightsail-instance
+- aws.log-group
+- aws.message-broker
+- aws.ml-model
+- aws.nat-gateway
+- aws.network-acl
+- aws.network-addr
+- aws.ops-item
+- aws.opswork-cm
+- aws.opswork-stack
+- aws.peering-connection
+- aws.qldb
+- aws.r53domain
+- aws.rds
+- aws.rds-cluster
+- aws.rds-cluster-param-group
+- aws.rds-cluster-snapshot
+- aws.rds-param-group
+- aws.rds-reserved
+- aws.rds-snapshot
+- aws.rds-subnet-group
+- aws.rds-subscription
+- aws.redshift
+- aws.redshift-reserved
+- aws.redshift-snapshot
+- aws.redshift-subnet-group
+- aws.rest-account
+- aws.rest-api
+- aws.rest-resource
+- aws.rest-stage
+- aws.rest-vpclink
+- aws.route-table
+- aws.rrset
+- aws.s3
+- aws.sagemaker-endpoint
+- aws.sagemaker-endpoint-config
+- aws.sagemaker-job
+- aws.sagemaker-model
+- aws.sagemaker-notebook
+- aws.sagemaker-transform-job
+- aws.secrets-manager
+- aws.security-group
+- aws.serverless-app
+- aws.shield-attack
+- aws.shield-protection
+- aws.simpledb
+- aws.snowball
+- aws.snowball-cluster
+- aws.sns
+- aws.sns-subscription
+- aws.sqs
+- aws.ssm-activation
+- aws.ssm-managed-instance
+- aws.ssm-parameter
+- aws.step-machine
+- aws.storage-gateway
+- aws.streaming-distribution
+- aws.subnet
+- aws.support-case
+- aws.transit-attachment
+- aws.transit-gateway
+- aws.user-pool
+- aws.vpc
+- aws.vpc-endpoint
+- aws.vpn-connection
+- aws.vpn-gateway
+- aws.waf
+- aws.waf-regional
+- aws.workspaces
+</code></pre>
+
+<p>For the record the number of resources listed are 180 as of Sun Nov 15 01:20:03 IST 2020</p>
+
+<pre><code>
+
+$&gt; bash common_actions_across_resources.sh
+      1 attach-encrypt
+      1 auto-patch
+      1 autorecover-alarm
+    115 auto-tag-user
+      2 backup
+      1 configure-lifecycle
+      1 configure-lifecycle-policy
+      4 copy
+      1 copy-cluster-tags
+      1 copy-instance-tags
+    115 copy-related-tag
+    100 delete
+      1 delete-bucket-notification
+      1 delete-global-grants
+      1 delete-integration
+      2 deregister
+      1 detach
+      3 disable
+      1 disable-s3-logging
+      1 enable-cloudtrail
+      1 enable-data-events
+      1 enable-s3-logging
+      1 enable-vpc-routing
+      1 encrypt
+      1 encrypt-instance-volumes
+      1 encryption-policy
+      1 encrypt-keys
+      1 encrypt-s3-destination
+    180 invoke-lambda
+    180 invoke-sfn
+    110 mark-for-op
+      4 modify
+      1 modify-db
+      1 modify-db-cluster
+      1 modify-endpoint
+      1 modify-instance
+      1 modify-listener
+      2 modify-policy
+     10 modify-security-groups
+      1 no-op
+     25 normalize-tag
+    180 notify
+      1 patch
+      1 pause
+    180 post-finding
+    180 post-item
+      1 propagate-spot-tags
+      1 propagate-tags
+    180 put-metric
+      1 reboot
+      1 region-copy
+      2 release
+      1 remove-keys
+      1 remove-launch-permissions
+      1 remove-permissions
+      1 remove-shared-accounts
+     10 remove-statements
+    115 remove-tag
+      1 remove-website-hosting
+     26 rename-tag
+      1 request-limit-increase
+      3 resize
+      1 restore
+      2 resume
+      4 retention
+      1 revoke-access
+      2 send-command
+      3 set-attributes
+      2 set-boundary
+      1 set-bucket-encryption
+      1 set-concurrency
+      1 set-continuous-backup
+      1 set-ebs-encryption
+      1 set-emr-block-public-access
+      4 set-encryption
+      3 set-flow-log
+      1 set-groups
+      1 set-immutability
+      1 set-instance-profile
+      1 set-inventory
+      1 set-lifecycle
+      2 set-logging
+      1 set-metadata-access
+      2 set-monitoring
+      1 set-password-policy
+      1 set-permissions
+      1 set-policy
+      1 set-protection
+      1 set-protocols
+      2 set-public-access
+      1 set-public-block
+      1 set-query-logging
+      1 set-replication
+      1 set-retention-period
+      1 set-rotation
+      1 set-s3-logging
+      1 set-s3-public-block
+      1 set-scanning
+      7 set-shield
+      1 set-shield-advanced
+      1 set-snapshot-copy-tags
+      1 set-ssl-listener-policy
+      1 set-state
+      1 set-statements
+      1 set-stream
+      2 set-waf
+      1 set-xray-encrypt
+      6 snapshot
+      4 start
+      8 stop
+      1 suspend
+    115 tag
+     28 tag-trim
+      3 terminate
+      1 toggle-logging
+      1 toggle-versioning
+      5 update
+      1 update-agent
+      1 update-cluster
+      1 update-config
+      1 update-environment
+      1 update-integration
+      1 update-method
+      1 update-trail
+      1 upgrade
+    180 webhook
+$&gt;cat common_actions_across_resources.sh
+#!/bin/bash
+
+cat /dev/null &gt; actions_list.txt
+for resource in `custodian schema aws | grep ^- | awk '{print $NF}'`
+do
+    custodian schema ${resource}.actions | grep "\- " | awk '{print $NF}' &gt;&gt; actions_list.txt
+done
+cat actions_list.txt | sort | uniq -c
+$&gt;
+</code></pre>
+
+<pre><code>
+$&gt; bash common_filters_across_resources.sh
+      1 access-analyzer
+      1 access-key
+      6 age
+      2 attributes
+      1 bucket-encryption
+      1 bucket-logging
+      1 bucket-notification
+      1 capacity-delta
+      1 check-cloudtrail
+      1 check-config
+      6 check-permissions
+      1 check-public-block
+    132 config-compliance
+      1 connection-status
+      1 continuous-backup
+      2 credential
+     26 cross-account
+      1 data-events
+      1 db-parameter
+      1 default-ebs-encryption
+      7 default-vpc
+      1 dhcp-options
+      1 diff
+      2 distribution-config
+      1 ebs
+      1 egress
+      1 emr-block-public-access
+      1 ephemeral
+    180 event
+      1 event-source
+      1 fault-tolerant
+    165 finding
+      3 flow-logs
+      1 global-grants
+      2 glue-security-config
+      1 grant-count
+      1 group
+      1 guard-duty
+      1 has-allow-all
+      3 has-inline-policy
+      1 has-specific-managed-policy
+      1 has-statement
+      1 has-users
+      1 has-virtual-mfa
+      2 healthcheck-protocol-mismatch
+     14 health-event
+      6 iam-analyzer
+      1 iam-summary
+      2 image
+      3 image-age
+      1 ingress
+      2 instance
+      1 instance-age
+      1 instance-attribute
+      1 instance-uptime
+      1 internet-gateway
+      1 invalid
+      1 inventory
+      2 is-logging
+      1 is-log-target
+      2 is-not-logging
+      1 is-shadow
+      1 is-ssl
+      1 key-rotation-status
+      2 kms-alias
+     17 kms-key
+      1 last-write
+      1 latest
+      1 launch-config
+      1 lifecycle-policy
+      1 lifecycle-rule
+      1 listener
+      1 logging
+    110 marked-for-op
+     40 metrics
+      1 mfa-device
+      1 mismatch-s3-origin
+      1 missing
+      1 missing-policy-statement
+      1 missing-route
+      1 modifyable
+      1 nat-gateway
+     11 network-location
+      1 no-encryption-statement
+      1 no-specific-managed-policy
+      1 not-encrypted
+      5 offhour
+      6 onhour
+    180 ops-item
+      1 param
+      1 password-policy
+      1 policy
+      1 progagated-tags
+      1 query-logging-enabled
+    180 reduce
+      1 reserved-concurrency
+      1 rest-integration
+      1 rest-method
+      1 route
+      1 s3-cidr
+      1 s3-public-block
+      4 security-config
+     25 security-group
+      1 securityhub
+      1 service-limit
+      8 shield-enabled
+      2 shield-metrics
+      1 singleton
+      1 skip-ami-snapshots
+      1 ssl-policy
+      1 ssm
+      1 ssm-compliance
+      1 stale
+      1 state-age
+      2 status
+     29 subnet
+     51 tag-count
+      3 taggable
+      1 target-group
+      2 task-definition
+      1 termination-protected
+      9 unused
+      1 upgrade-available
+      4 usage
+      4 used
+      2 user-data
+      1 valid
+    180 value
+     14 vpc
+      1 vpc-attributes
+      2 vpc-endpoint
+      1 vpc-id
+      2 waf-enabled
+      1 xray-encrypt-key
+$&gt; cat common_filters_across_resources.sh
+#!/bin/bash
+
+cat /dev/null &gt; filters_list.txt
+for resource in `custodian schema aws | grep ^- | awk '{print $NF}'`
+do
+    custodian schema ${resource}.filters | grep "\- " | awk '{print $NF}' &gt;&gt; filters_list.txt
+done
+cat filters_list.txt | sort | uniq -c
+$&gt;
+</code></pre>
+
+<p>Few <strong>actions</strong> are common for all the aws resources</p>
+
+<ul>
+<li><p>invoke-lambda</p></li>
+<li><p>invoke-sfn</p></li>
+<li><p>notify</p></li>
+<li><p>post-finding</p></li>
+<li><p>post-item</p></li>
+<li><p>put-metric</p></li>
+<li><p>webhook</p></li>
+</ul>
+
+
+<p>Few <strong>filters</strong> are common for all the aws resources</p>
+
+<ul>
+<li><p>event</p></li>
+<li><p>ops-item</p></li>
+<li><p>reduce</p></li>
+<li><p>value</p></li>
+</ul>
+
+
+<p>Sun Nov 15 16:01:45 IST 2020</p>
+
+<p><strong>Vocabularies</strong> of Custodian</p>
+
+<ul>
+<li><p>Resources</p></li>
+<li><p>Actions</p></li>
+<li><p>Filters</p></li>
+<li><p>Modes</p></li>
+</ul>
+
+
+<p>Summary of the <code>custodian schema</code> command outputs</p>
+
+<pre><code>
+$&gt;custodian schema --summary
+aws:
+ resource count: 179
+ actions: 126
+ filters: 134
+aliases:
+ count: 2
+mode:
+ count: 11
+$&gt;
+</code></pre>
+
+<p>When <code>custodian</code> command is invoked it first calls <code>c7n/cli.py</code></p>
+
+<p>When <code>custodian schema</code> command first invoked, it first calls <code>schema_cmd</code> function in <code>c7n/commands.py</code>.</p>
+
+<p>In <code>schema_cmd</code> function <code>c7n/schema.py</code> invoke happens through <code>from c7n import schema</code></p>
+
+<p>In <code>schema_cmd</code> function we have definition of all the allowed options for <code>custodian schema</code></p>
+
+<pre><code>    # Here are the formats for what we accept:
+    # - No argument
+    #   - List all available RESOURCES
+    # - PROVIDER
+    #   - List all available RESOURCES for supplied PROVIDER
+    # - RESOURCE
+    #   - List all available actions and filters for supplied RESOURCE
+    # - MODE
+    #   - List all available MODES
+    # - RESOURCE.actions
+    #   - List all available actions for supplied RESOURCE
+    # - RESOURCE.actions.ACTION
+    #   - Show class doc string and schema for supplied action
+    # - RESOURCE.filters
+    #   - List all available filters for supplied RESOURCE
+    # - RESOURCE.filters.FILTER
+    #   - Show class doc string and schema for supplied filter
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>
