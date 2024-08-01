@@ -82,3 +82,31 @@ body.dark-mode a {
 body.dark-mode a:hover {
     color: #3700b3;
 }
+
+/* Dark Mode Toggle Button Styles */
+#dark-mode-toggle {
+    background-color: #0066cc;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #004080;
+}
+
+/* Dark Mode Toggle Button in Dark Mode */
+body.dark-mode #dark-mode-toggle {
+    background-color: #bb86fc;
+    color: #000000;
+}
+
+body.dark-mode #dark-mode-toggle:hover {
+    background-color: #3700b3;
+}
