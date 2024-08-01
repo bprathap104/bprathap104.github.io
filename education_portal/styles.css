@@ -60,29 +60,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Dark Mode Styles */
-body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-}
-
-body.dark-mode .container {
-    background-color: #1e1e1e;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-}
-
-body.dark-mode h1, body.dark-mode h2 {
-    color: #ffffff;
-}
-
-body.dark-mode a {
-    color: #bb86fc;
-}
-
-body.dark-mode a:hover {
-    color: #3700b3;
-}
-
 /* Dark Mode Toggle Button Styles */
 #dark-mode-toggle {
     background-color: #0066cc;
@@ -109,4 +86,27 @@ body.dark-mode #dark-mode-toggle {
 
 body.dark-mode #dark-mode-toggle:hover {
     background-color: #3700b3;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .container {
+    background-color: #1e1e1e;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode h1, body.dark-mode h2 {
+    color: #ffffff;
+}
+
+body.dark-mode a {
+    color: #bb86fc;
+}
+
+body.dark-mode a:hover {
+    color: #3700b3;
 }
