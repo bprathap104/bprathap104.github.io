@@ -191,7 +191,7 @@ function populateTable() {
     
     specialists.forEach(specialist => {
         const row = document.createElement("tr");
-[O        row.innerHTML = `
+        row.innerHTML = `
             <td data-label="Specialist">${specialist.name}</td>
             <td data-label="Body Part">${specialist.bodyPart}</td>
             <td data-label="Description">${specialist.description}</td>
